@@ -17,7 +17,7 @@ class vim::params {
   ### Application related parameters
 
   $package = $::operatingsystem ? {
-    default => 'vim',
+    default => 'vim-common',
   }
 
   $config_dir = $::operatingsystem ? {
@@ -25,7 +25,8 @@ class vim::params {
   }
 
   $config_file = $::operatingsystem ? {
-    default => '/etc/vim/vimrc',
+    /(?i:Debian|Ubuntu|Mint)/ => '/etc/vim/vimrc',
+    default => '/etc/vimrc',
   }
 
   $config_file_mode = $::operatingsystem ? {
