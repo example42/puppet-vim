@@ -1,3 +1,6 @@
 [submodule "files/rodjek-vim-puppet"]
 	path = files/rodjek-vim-puppet
 	url = https://github.com/rodjek/vim-puppet
+[submodule "files/syntastic"]
+	path = files/syntastic
+	url = https://github.com/scrooloose/syntastic.git
