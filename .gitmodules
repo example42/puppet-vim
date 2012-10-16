@@ -4,3 +4,6 @@
 [submodule "files/syntastic"]
 	path = files/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "files/tpope-vim-rails"]
+	path = files/tpope-vim-rails
+	url = git://github.com/tpope/vim-rails.git
