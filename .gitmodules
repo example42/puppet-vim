@@ -7,3 +7,6 @@
 [submodule "files/tpope-vim-rails"]
 	path = files/tpope-vim-rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "files/tpope-vim-fugitive"]
+	path = files/tpope-vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
