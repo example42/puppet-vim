@@ -21,7 +21,7 @@ class vim::params {
   }
 
   $config_dir = $::operatingsystem ? {
-    default => '/etc/vim',
+    default                   => '/etc/vim',
   }
 
   $config_file = $::operatingsystem ? {

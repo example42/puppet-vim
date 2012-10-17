@@ -1,4 +1,4 @@
-# File Managed By Puppet
+" File Managed By Puppet
 
 call pathogen#infect()
 syntax on
