@@ -156,7 +156,6 @@ class vim (
       ensure  => directory,
       path    => $vim::config_dir,
       require => Package[$vim::package],
-      notify  => $vim::manage_service_autorestart,
       source  => $vim::source_dir,
       recurse => true,
       purge   => $vim::bool_source_dir_purge,
