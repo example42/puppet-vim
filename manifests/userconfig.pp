@@ -112,9 +112,9 @@ define vim::userconfig (
     ''        => "/home/$real_user/.vimrc",
     default   => $config_file,
   }
-  $manage_path_dir = $config_dir ? {
+  $manage_path_dir = $vim::config_dir ? {
     ''        => "/home/$real_user/.vim",
-    default   => $config_dir,
+    default   => $vim::config_dir,
   }
 
   ### Resources managed by the define
