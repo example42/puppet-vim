@@ -1,4 +1,4 @@
-= Puppet module: vim
+# Puppet module: vim
 
 This is a Puppet module for vim
 It provides only package installation and file configuration.
@@ -14,7 +14,7 @@ Released under the terms of Apache 2 License.
 This module requires the presence of Example42 Puppi module in your modulepath.
 
 
-== USAGE - Basic management
+## USAGE - Basic management
 
 * Install vim with default settings
 
@@ -39,7 +39,7 @@ This module requires the presence of Example42 Puppi module in your modulepath.
         }
 
 
-== USAGE - Overrides and Customizations
+## USAGE - Overrides and Customizations
 * Use custom sources for main config file 
 
         class { 'vim':
