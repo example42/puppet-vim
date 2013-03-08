@@ -21,12 +21,12 @@ class vim::params {
   }
 
   $config_dir = $::operatingsystem ? {
-    default                   => '/etc/vim',
+    default => '/etc/vim',
   }
 
   $config_file = $::operatingsystem ? {
     /(?i:Debian|Ubuntu|Mint)/ => '/etc/vim/vimrc',
-    default => '/etc/vimrc',
+    default                   => '/etc/vimrc',
   }
 
   $config_file_mode = $::operatingsystem ? {

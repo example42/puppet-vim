@@ -73,7 +73,7 @@
 # - Set variables (at top scope level on in a ENC) and "include vim"
 # - Declare vim as a parametrized class:
 #   class { 'minimal':
-#     template => 'site/vim/vim.conf.erb', 
+#     template => 'site/vim/vim.conf.erb',
 #   }
 #
 # See README for more available parameters or just explore the code below.
@@ -150,7 +150,7 @@ class vim (
   }
 
   # The whole vim configuration directory is managed only
-  # if $vim::source_dir is provided 
+  # if $vim::source_dir is provided
   if $vim::source_dir and $vim::config_dir != '' {
     file { 'vim.dir':
       ensure  => directory,
