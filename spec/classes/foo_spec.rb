@@ -7,19 +7,19 @@ describe 'vim' do
   let(:facts) { { :ipaddress => '10.42.42.42' } }
 
   describe 'Test standard installation' do
-    it { should contain_package('vim').with_ensure('present') }
+    it { should contain_package('vim-common').with_ensure('present') }
     it { should contain_file('vim.conf').with_ensure('present') }
   end
 
   describe 'Test installation of a specific version' do
     let(:params) { {:version => '1.0.42' } }
-    it { should contain_package('vim').with_ensure('1.0.42') }
+    it { should contain_package('vim-common').with_ensure('1.0.42') }
   end
 
   describe 'Test decommissioning - absent' do
     let(:params) { {:absent => true } }
 
-    it 'should remove Package[vim]' do should contain_package('vim').with_ensure('absent') end 
+    it 'should remove Package[vim-common]' do should contain_package('vim-common').with_ensure('absent') end 
     it 'should remove vim configuration file' do should contain_file('vim.conf').with_ensure('absent') end
   end
 
