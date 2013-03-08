@@ -66,3 +66,5 @@ This module requires the presence of Example42 Puppi module in your modulepath.
           my_class => 'example42::my_vim',
         }
 
+
+[![Build Status](https://travis-ci.org/example42/puppet-vim.png?branch=master)](https://travis-ci.org/example42/puppet-vim)
