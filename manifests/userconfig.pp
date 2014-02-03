@@ -48,12 +48,15 @@
 #   managed by Puppet.
 #
 # [*config_file*]
-#   Configration configuration file path. Default /home/$user/.vimrc
+#   Configration file path. Default /home/$user/.vimrc
+#
+# [*config_dir*]
+#   Configration directory path. Default /home/$user/.vim
 #
 # == Examples
 #
 #   vim::userconfig { 'al':
-#     source => "puppet:///modules/example42/vim/vimrc-al", 
+#     source => "puppet:///modules/example42/vim/vimrc-al",
 #   }
 #
 #
@@ -67,7 +70,8 @@ define vim::userconfig (
   $options             = '',
   $absent              = false,
   $audit_only          = false,
-  $config_file         = ''
+  $config_file         = '',
+  $config_dir          = ''
   ) {
 
   # Sanitize of booleans
@@ -109,12 +113,12 @@ define vim::userconfig (
     default   => $source_dir,
   }
   $manage_path = $config_file ? {
-    ''        => "/home/$real_user/.vimrc",
+    ''        => "/home/${real_user}/.vimrc",
     default   => $config_file,
   }
-  $manage_path_dir = $vim::config_dir ? {
-    ''        => "/home/$real_user/.vim",
-    default   => $vim::config_dir,
+  $manage_path_dir = $config_dir ? {
+    ''        => "/home/${real_user}/.vim",
+    default   => $config_dir,
   }
 
   ### Resources managed by the define
