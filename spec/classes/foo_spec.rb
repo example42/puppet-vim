@@ -56,4 +56,15 @@ describe 'vim' do
     end
   end
 
+  describe 'should install on Gentoo' do
+    let :facts do
+      {
+        :operatingsystem => 'Gentoo',
+      }
+    end
+
+    it { should contain_package('app-editors/vim').with_ensure('present') }
+    it { should contain_file('vim.conf').with_path('/etc/vim/vimrc') }
+  end
+
 end
